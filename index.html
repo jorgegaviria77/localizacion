@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+	  <title></title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+	  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	  <link href="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.css" rel="stylesheet">
+	  <link href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.css" rel="stylesheet">
+
+	  <link rel="stylesheet" type="text/css" href="style.css">
+
+	  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	  <script type="text/javascript" src="basic.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	  <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	  <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
+
+	  <script src="script.js"></script>
+	  
+	 </head>
+<body onload="inicio()">
+<div data-role="page" data-control-title="Home" id="page1">
+    <div data-theme="b" data-role="header">
+        <h1>
+            Header
+        </h1>
+    </div>
+    <div role="main" class="ui-content">
+        <a href="##" data-controltype="image">
+            <div style=" text-align:center">
+                <img style="width: 100%; height: 100%" src="http://images.clipartpanda.com/jogging-clipart-woman-jogging-hi.png">
+            </div>
+        </a>
+        <a href="#page2" class="ui-btn ui-btn-c">
+            Trotar
+        </a>
+    </div>
+    <div data-role="tabbar" data-iconpos="top" data-theme="a">
+        <ul>
+            <li>
+                <a href="#page1" data-transition="fade" data-theme="" data-icon="home"
+                class="ui-btn-active ui-state-persist">
+                    One
+                </a>
+            </li>
+            <li>
+                <a href="#" data-transition="fade" data-theme="" data-icon="star">
+                    Two
+                </a>
+            </li>
+            <li>
+                <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                    Three
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div data-role="page" data-control-title="Trotar" id="page2">
+    <div data-theme="b" data-role="header">
+        <h1 class="ui-title">
+            Trotar
+        </h1>
+    </div>
+    <div role="main" class="ui-content">
+       
+	   
+	   <!-- google maps -->
+		<div id="map_canvas" style="margin:0 auto;width:auto; height:236px"></div>
+        <div id="sport">
+          <!--<div>-->
+            <h4 class=" text-align-center">
+              <b>
+              
+              </b>
+            </h4>
+          <!--</div>-->
+          <div id="salida">
+            
+              <button type="button" data-theme="a" data-mini="true" onclick="caminando();">Comienza</button>
+            
+          </div>
+
+          <div>
+            <h3 class=" text-align-center">
+                <b>
+               
+              </b>
+            </h3>
+          </div>
+
+          <div id="salida">
+            
+              <button type="button" data-theme="a" data-mini="true" href="#page1" onclick="calcRoute(); desaparece();">Termina</button>
+            
+          </div>
+
+        </div>
+
+
+        <div id="directionsPanel" style="margin:0 auto;width:auto;height 200px">
+
+		
+
+          <p>
+            <strong>Distancia Total:</strong>
+            <span id="total"></span>
+          </p>
+          <p>
+            <strong>Tiempo Total:</strong>
+            <span id="total1"></span>
+          </p>
+          <p>
+            <strong>Calorias Quemadas:</strong>
+            <span id="cal1"></span>
+          </p>
+
+        </div>
+		
+	   <!-- Fin Google Maps -->
+	   
+	   
+	   
+        <!--<a href="#page1" class="ui-btn ui-btn-c">
+            Trotar
+        </a>
+        <a href="#page2" class="ui-btn ">
+            Parar
+        </a>-->
+    </div>
+    <div data-role="tabbar" data-iconpos="top" data-theme="a">
+        <ul>
+            <li>
+                <a href="#page1" data-transition="fade" data-theme="" data-icon="home"
+                class="ui-btn-active ui-state-persist">
+                    One
+                </a>
+            </li>
+            <li>
+                <a href="#" data-transition="fade" data-theme="" data-icon="star">
+                    Two
+                </a>
+            </li>
+            <li>
+                <a href="#" data-transition="fade" data-theme="" data-icon="info">
+                    Three
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
